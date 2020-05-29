@@ -41,7 +41,7 @@ namespace UnitTests
             result.Id = "zero";
 
             // Assert
-            Assert.AreEqual(result.Id, "one");
+            Assert.AreEqual(result.Id, "zero");
         }
     }
 }
