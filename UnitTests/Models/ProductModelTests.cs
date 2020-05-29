@@ -1,6 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using HWUT.Models;
 using System;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 namespace UnitTests
 {
@@ -42,6 +44,32 @@ namespace UnitTests
 
             // Assert
             Assert.AreEqual(result.Id, "zero");
+        }
+
+        [TestMethod]
+        public void ProductModel_GetSet_Maker_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+            result.Maker = "Sen Yang";
+
+            // Assert
+            Assert.AreEqual(result.Maker, "Sen Yang");
+        }
+
+        [TestMethod]
+        public void ProductModel_GetSet_Image_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+            result.Image = "earphone1.png";
+
+            // Assert
+            Assert.AreEqual(result.Image, "earphone1.png");
         }
     }
 }
