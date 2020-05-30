@@ -123,5 +123,20 @@ namespace UnitTests
             // Assert
             Assert.AreEqual(result.Sequence, "first");
         }
+
+        [TestMethod]
+        public void ProductModel_GetSet_Email_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+            result.Email = "syang1@seattleu.edu";
+
+            // Assert
+            Assert.AreEqual(result.Email, "syang1@seattleu.edu");
+        }
+
+
     }
 }
