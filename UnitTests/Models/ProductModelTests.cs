@@ -1,7 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using HWUT.Models;
 using System;
-using System.Text.Json.Serialization;
 using System.Text.Json;
 
 namespace UnitTests
@@ -174,6 +173,42 @@ namespace UnitTests
 
             // Assert
             Assert.AreEqual(result.ToString(), JsonSerializer.Serialize(result));
+        }
+
+        [TestMethod]
+        public void ProductModel_GetSet_AverageRating_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert Initialize rating is 5
+            Assert.AreEqual(result.AverageRating(), 5);
+
+            // Act
+            result.Ratings = null;
+
+            // Assert
+            Assert.AreEqual(result.AverageRating(), 0);
+
+            // Act
+            result.Ratings = new int[] { };
+
+            // Assert
+            Assert.AreEqual(result.AverageRating(), 0);
+
+            // Act
+            result.Ratings = new int[] { 0, 0 };
+
+            // Assert
+            Assert.AreEqual(result.AverageRating(), 0);
+
+            // Act
+            result.Ratings = new int[] { 5, 5 };
+
+            // Assert
+            Assert.AreEqual(result.AverageRating(), 5);
         }
     }
 }
