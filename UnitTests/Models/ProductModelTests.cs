@@ -108,7 +108,7 @@ namespace UnitTests
             result.Description = "hello";
 
             // Assert
-            Assert.AreEqual(result.Title, "hello");
+            Assert.AreEqual(result.Description, "hello");
         }
     }
 }
