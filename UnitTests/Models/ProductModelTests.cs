@@ -163,5 +163,17 @@ namespace UnitTests
             Assert.AreEqual(result.Ratings.Length, 1);
             Assert.AreEqual(result.Ratings[0], 5);
         }
+
+        [TestMethod]
+        public void ProductModel_GetSet_ToString_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual(result.ToString(), JsonSerializer.Serialize(result));
+        }
     }
 }
