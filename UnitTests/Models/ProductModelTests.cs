@@ -130,10 +130,10 @@ namespace UnitTests
 
             // Act
             var result = new ProductModel();
-            result.Email = "syang1@seattleu.edu";
+            result.Email = "";
 
             // Assert
-            Assert.AreEqual(result.Email, "syang1@seattleu.edu");
+            Assert.AreEqual(result.Email, "");
         }
 
         [TestMethod]
