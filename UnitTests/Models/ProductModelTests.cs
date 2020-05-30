@@ -84,5 +84,18 @@ namespace UnitTests
             // Assert
             Assert.AreEqual(result.Url, "https://www.microsoft.com/en-us/");
         }
+
+        [TestMethod]
+        public void ProductModel_GetSet_Title_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+            result.Title = "software";
+
+            // Assert
+            Assert.AreEqual(result.Title, "software");
+        }
     }
 }
