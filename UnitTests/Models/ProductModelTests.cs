@@ -137,6 +137,17 @@ namespace UnitTests
             Assert.AreEqual(result.Email, "syang1@seattleu.edu");
         }
 
+        [TestMethod]
+        public void ProductModel_GetSet_Logistics_Default_Should_Pass()
+        {
+            // Arrange
 
+            // Act
+            var result = new ProductModel();
+            result.Logistics = "t";
+
+            // Assert
+            Assert.AreEqual(result.Logistics, "t");
+        }
     }
 }
