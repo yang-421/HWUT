@@ -130,10 +130,10 @@ namespace UnitTests
 
             // Act
             var result = new ProductModel();
-            result.Email = "";
+            result.Email = "Unknown";
 
             // Assert
-            Assert.AreEqual(result.Email, "");
+            Assert.AreEqual(result.Email, "Unknown");
         }
 
         [TestMethod]
