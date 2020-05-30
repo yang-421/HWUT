@@ -176,7 +176,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_GetSet_AverageRating_Default_Should_Pass()
+        public void ProductModel_GetSet_AverageRating1_Default_Should_Pass()
         {
             // Arrange
 
@@ -185,30 +185,47 @@ namespace UnitTests
 
             // Assert Initialize rating is 5
             Assert.AreEqual(result.AverageRating(), 5);
+        }
+            [TestMethod]
+            public void ProductModel_GetSet_AverageRating2_Default_Should_Pass()
+            {
+                // Act
+                var result = new ProductModel();
+                result.Ratings = null;
 
-            // Act
-            result.Ratings = null;
+                // Assert
+                Assert.AreEqual(result.AverageRating(), 0);
+            }
 
-            // Assert
-            Assert.AreEqual(result.AverageRating(), 0);
+            [TestMethod]
+            public void ProductModel_GetSet_AverageRating3_Default_Should_Pass()
+            {
+                // Act
+                var result = new ProductModel();
+                result.Ratings = new int[] { };
 
-            // Act
-            result.Ratings = new int[] { };
+                // Assert
+                Assert.AreEqual(result.AverageRating(), 0);
+            }
 
-            // Assert
-            Assert.AreEqual(result.AverageRating(), 0);
+            [TestMethod]
+            public void ProductModel_GetSet_AverageRating4_Default_Should_Pass()
+            {   // Act
+                var result = new ProductModel();
+                result.Ratings = new int[] { 0, 0 };
 
-            // Act
-            result.Ratings = new int[] { 0, 0 };
+                // Assert
+                Assert.AreEqual(result.AverageRating(), 0);
+            }
 
-            // Assert
-            Assert.AreEqual(result.AverageRating(), 0);
+            [TestMethod]
+            public void ProductModel_GetSet_AverageRating5_Default_Should_Pass()
+            {// Act
+                var result = new ProductModel();
+                result.Ratings = new int[] { 5, 5 };
 
-            // Act
-            result.Ratings = new int[] { 5, 5 };
-
-            // Assert
-            Assert.AreEqual(result.AverageRating(), 5);
+                // Assert
+                Assert.AreEqual(result.AverageRating(), 5);
+            }
         }
     }
-}
