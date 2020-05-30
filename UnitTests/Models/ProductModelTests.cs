@@ -144,10 +144,24 @@ namespace UnitTests
 
             // Act
             var result = new ProductModel();
-            result.Logistics = "t";
+            result.Logistics = "";
 
             // Assert
-            Assert.AreEqual(result.Logistics, "t");
+            Assert.AreEqual(result.Logistics, "");
+        }
+
+        [TestMethod]
+        public void ProductModel_GetSet_Ratings_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+
+            // Assert
+            Assert.AreEqual(result.Ratings.Length, 1);
+            Assert.AreEqual(result.Ratings[0], 5);
         }
     }
 }
