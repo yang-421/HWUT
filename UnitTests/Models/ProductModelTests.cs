@@ -97,5 +97,18 @@ namespace UnitTests
             // Assert
             Assert.AreEqual(result.Title, "software");
         }
+
+        [TestMethod]
+        public void ProductModel_GetSet_Description_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+            result.Description = "hello";
+
+            // Assert
+            Assert.AreEqual(result.Title, "hello");
+        }
     }
 }
