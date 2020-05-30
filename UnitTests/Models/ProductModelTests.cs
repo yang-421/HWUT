@@ -71,5 +71,18 @@ namespace UnitTests
             // Assert
             Assert.AreEqual(result.Image, "earphone1.png");
         }
+
+        [TestMethod]
+        public void ProductModel_GetSet_Url_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+            result.Url = "https://www.microsoft.com/en-us/";
+
+            // Assert
+            Assert.AreEqual(result.Url, "https://www.microsoft.com/en-us/");
+        }
     }
 }
