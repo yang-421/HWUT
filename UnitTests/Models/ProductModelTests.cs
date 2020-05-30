@@ -110,5 +110,18 @@ namespace UnitTests
             // Assert
             Assert.AreEqual(result.Description, "hello");
         }
+
+        [TestMethod]
+        public void ProductModel_GetSet_Sequence_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+            result.Sequence = "first";
+
+            // Assert
+            Assert.AreEqual(result.Sequence, "first");
+        }
     }
 }
